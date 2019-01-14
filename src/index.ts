@@ -1,8 +1,10 @@
 import { useContext } from "react";
-import Context from "./Context";
+import Context, { IContext } from "./Context";
+import Provider from "./Provider";
 
-function useUserAgent() {
-  return useContext(Context);
+function useUserAgent(): IContext {
+  return useContext<IContext>(Context);
 }
 
+export const UserAgentProvider = Provider;
 export default useUserAgent;

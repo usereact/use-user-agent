@@ -1,12 +1,13 @@
-import UAParser from "ua-parser-js";
+import * as React from "react";
+import * as UAParser from "ua-parser-js";
 import Context from "./Context";
 
-interface IUserAgentProvider {
+interface IProvider {
   children: React.ReactNode;
   userAgent: string;
 }
 
-function UserAgentProvider({ children, userAgent }: IUserAgentProvider) {
+function Provider({ children, userAgent }: IProvider) {
   const uaParser = new UAParser();
   uaParser.setUA(userAgent);
 
@@ -20,4 +21,4 @@ function UserAgentProvider({ children, userAgent }: IUserAgentProvider) {
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 
-export default UserAgentProvider;
+export default Provider;

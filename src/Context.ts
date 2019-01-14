@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-interface IContext {
+export interface IContext {
   os?: IUAParser.IOS;
   device?: IUAParser.IDevice;
   engine?: IUAParser.IEngine;
