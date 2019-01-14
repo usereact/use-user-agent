@@ -1,0 +1,1 @@
+{"code":"import { createContext } from \"react\";\r\nvar Context = createContext({});\r\nexport default Context;\r\n","dts":{"name":"/Users/geraldurschitz/Projects/oss/use-user-agent/Context.d.ts","writeByteOrderMark":false,"text":"declare const Context: any;\r\nexport default Context;\r\n"}}
