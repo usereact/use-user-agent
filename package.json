@@ -1,6 +1,6 @@
 {
   "name": "use-user-agent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React hook for user agent parsing and easy access.",
   "main": "dist/use-user-agent.js",
   "umd:main": "dist/use-user-agent.umd.js",
