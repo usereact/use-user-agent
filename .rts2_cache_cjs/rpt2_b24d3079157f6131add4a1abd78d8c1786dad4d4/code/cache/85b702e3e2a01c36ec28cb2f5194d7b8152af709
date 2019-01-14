@@ -1,1 +1,0 @@
-{"code":"import { useContext } from \"react\";\r\nimport Context from \"./Context\";\r\nfunction useUserAgent() {\r\n    return useContext(Context);\r\n}\r\nexport default useUserAgent;\r\n","dts":{"name":"/Users/geraldurschitz/Projects/oss/use-user-agent/index.d.ts","writeByteOrderMark":false,"text":"declare function useUserAgent(): any;\r\nexport default useUserAgent;\r\n"}}
