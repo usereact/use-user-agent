@@ -1,0 +1,1 @@
+var e=require("react"),r=require("ua-parser-js"),t=e.createContext({});exports.UserAgentProvider=function(n){var u=n.children,i=n.userAgent,o=new r;o.setUA(i);var s={os:o.getOS(),browser:o.getBrowser(),cpu:o.getCPU(),device:o.getDevice(),engine:o.getEngine()};return e.createElement(t.Provider,{value:s},u)},exports.default=function(){return e.useContext(t)};
