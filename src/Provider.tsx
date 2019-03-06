@@ -8,16 +8,18 @@ interface IProvider {
 }
 
 function Provider({ children, userAgent }: IProvider) {
-  const uaParser = new UAParser();
-  uaParser.setUA(userAgent);
+  const value = React.useMemo(() => {
+    const uaParser = new UAParser();
+    uaParser.setUA(userAgent);
+    return {
+      os: uaParser.getOS(),
+      browser: uaParser.getBrowser(),
+      cpu: uaParser.getCPU(),
+      device: uaParser.getDevice(),
+      engine: uaParser.getEngine()
+    };
+  }, [userAgent]);
 
-  const value = {
-    os: uaParser.getOS(),
-    browser: uaParser.getBrowser(),
-    cpu: uaParser.getCPU(),
-    device: uaParser.getDevice(),
-    engine: uaParser.getEngine()
-  };
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 
